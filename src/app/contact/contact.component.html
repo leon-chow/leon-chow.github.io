@@ -5,7 +5,7 @@
   <p> Please fill out the form below to contact me and I will try to reach back within 3 business days. </p>
   <form>
     <div class="form-container">
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" required>
         <mat-label>First Name</mat-label>
         <input matInput>
       </mat-form-field> <br>
@@ -21,6 +21,11 @@
         <mat-label>Phone Number</mat-label>
         <input matInput>
       </mat-form-field> <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Message </mat-label>
+        <textarea matInput rows="5" cols="40"> </textarea>
+      </mat-form-field> <br>
+      <button mat-raised-button> Submit </button>
     </div>
   </form>
 </div>
