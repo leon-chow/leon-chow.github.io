@@ -1,0 +1,7 @@
+.table {
+  width: auto;
+  height: auto;
+  margin: 10px;
+  border: 1px solid #555;
+  flex: auto;
+}
