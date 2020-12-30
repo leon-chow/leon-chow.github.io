@@ -1,0 +1,14 @@
+.form-container {
+  display: table;
+}
+
+.form-label {
+  float: left;
+  padding: 10px;
+  margin: 10px;
+}
+.form-element {
+  float: right;
+  padding: 10px;
+  margin: 10px;
+}

@@ -1,20 +1,14 @@
-<body>
-  <div class="table">
-    <mat-drawer-container class="example-container">
-      <mat-drawer mode="side" opened>Drawer content</mat-drawer>
-      <mat-drawer-content>Main content</mat-drawer-content>
-    </mat-drawer-container>
-    <div>
-      <div class="links">
-        <ul>
-          <li *ngFor="let link of links">
-            <a [routerLink]="'.'" [fragment]="link"> {{ link }} </a>
-          </li>
-        </ul>
+<div class="drawer">
+  <mat-drawer-container class="example-container">
+    <mat-drawer class="mat-drawer" mode="side" opened>
+      <app-navbar> </app-navbar>
+    </mat-drawer>
+    <mat-drawer-content>
+      <div>
+        <app-projects [attr.id]="links"> </app-projects>
+        <app-about [attr.id]="links[1]"> </app-about>
+        <app-contact [attr.id]="links[2]"> </app-contact>
       </div>
-      <app-projects [attr.id]="links"> </app-projects>
-      <app-about [attr.id]="links[1]"> </app-about>
-      <app-contact [attr.id]="links[2]"> </app-contact>
-    </div>
-  </div>
-</body>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>
