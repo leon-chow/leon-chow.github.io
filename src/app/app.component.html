@@ -1,9 +1,13 @@
 <header class="header">
-  <mat-toolbar>
-    <title> Leon Chow </title>
-    <h1> Leon Chow</h1>
-  </mat-toolbar>
+  <title> Leon Chow </title>
+  <h1> Leon Chow</h1>
 </header>
+<mat-toolbar class="float-header"
+  [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
+  <mat-toolbar-row>
+    <span class="span"> <h1> Leon Chow </h1> </span>
+  </mat-toolbar-row>
+</mat-toolbar>
 <body>
   <router-outlet></router-outlet>
 </body>

@@ -8,6 +8,7 @@
 }
 
 .mat-drawer {
-  padding-top: 50px;
+  z-index: 1;
   position: fixed;
+  margin: 100px;
 }
