@@ -1,12 +1,12 @@
 <div class="drawer">
   <mat-drawer-container class="example-container">
-    <mat-drawer class="mat-drawer" mode="side" opened>
+    <mat-drawer mode="side" opened>
       <app-navbar> </app-navbar>
     </mat-drawer>
     <mat-drawer-content>
-      <div>
-        <app-projects [attr.id]="links"> </app-projects>
-        <app-about [attr.id]="links[1]"> </app-about>
+      <div align="center">
+        <app-about [attr.id]="links[0]"> </app-about>
+        <app-projects [attr.id]="links[1]"> </app-projects>
         <app-contact [attr.id]="links[2]"> </app-contact>
       </div>
     </mat-drawer-content>

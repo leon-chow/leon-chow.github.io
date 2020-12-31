@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  links: Array<String> = ["projects", "contact", "about"];
+  links: Array<string> = ['About', 'Projects', 'Contact'];
 
   constructor() { }
 

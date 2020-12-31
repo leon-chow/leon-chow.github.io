@@ -6,12 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
+  links: Array<string> = ['About', 'Projects', 'Contact'];
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  links: Array<String> = ["projects", "about", "contact"];
 
 }
