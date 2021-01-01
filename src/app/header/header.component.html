@@ -1,10 +1,30 @@
 <header class="header">
   <title> Leon Chow </title>
-  <h1> Leon Chow</h1>
+  <span>
+    <h1>
+      Leon Chow
+      <a href="https://github.com/leon-chow" target="_blank">
+        <button mat-flat-button>
+          <img src="../../assets/icons/GitHub-Mark-32px.png">
+        </button>
+      </a>
+    </h1>
+  </span>
 </header>
 <mat-toolbar class="float-header"
   [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
   <mat-toolbar-row>
-    <span class="span"> <h1> Leon Chow </h1> </span>
+    <span class="span">
+      <h1>
+        Leon Chow
+      </h1>
+    </span>
+    <span>
+      <a href="https://github.com/leon-chow" target="_blank">
+        <button mat-flat-button>
+          <img src="../../assets/icons/GitHub-Mark-32px.png">
+        </button>
+      </a>
+    </span>
   </mat-toolbar-row>
 </mat-toolbar>
