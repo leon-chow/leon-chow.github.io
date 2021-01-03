@@ -5,9 +5,11 @@
 .drawer {
   width: auto;
   height: auto;
+  background-color: #eee;
+  padding-right: 10px;
 }
 
 .mat-drawer {
   position: fixed;
-  margin-top: 75px;
+  margin-top: 61px;
 }
