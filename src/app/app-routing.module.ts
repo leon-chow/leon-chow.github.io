@@ -14,6 +14,9 @@ const routes: Routes = [
   {
     path: '**', pathMatch: 'full', redirectTo: ''
   },
+  {
+    path: 'resume', redirectTo: '../../assets/Leon_Chow_Resume.pdf'
+  }
 ];
 
 const routerOptions: ExtraOptions = {

@@ -1,16 +1,30 @@
-<header class="header">
+<div class="header">
   <title> Leon Chow </title>
-  <span>
+  <span class="title">
     <h1>
       Leon Chow
-      <a href="https://github.com/leon-chow" target="_blank">
-        <button mat-flat-button>
-          <img src="../../assets/icons/GitHub-Mark-32px.png">
-        </button>
-      </a>
+      <span class="icons">
+        <span>
+          <a href="https://github.com/leon-chow" target="_blank">
+            <button mat-flat-button>
+              <img src="../../assets/icons/GitHub-Mark-32px.png">
+            </button>
+          </a>
+          <a href="https://www.linkedin.com/in/leon-chow/" target="_blank">
+            <button mat-flat-button>
+              <img class="icon" src="../../assets/icons/LI-In-Bug.png">
+            </button>
+          </a>
+          <a href="https://www.linkedin.com/in/leon-chow/" target="_blank">
+            <button mat-flat-button>
+              <mat-icon > picture_as_pdf-24px </mat-icon>
+            </button>
+          </a>
+        </span>
+      </span>
     </h1>
   </span>
-</header>
+</div>
 <mat-toolbar class="float-header"
   [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
   <mat-toolbar-row>
@@ -23,6 +37,21 @@
       <a href="https://github.com/leon-chow" target="_blank">
         <button mat-flat-button>
           <img src="../../assets/icons/GitHub-Mark-32px.png">
+        </button>
+      </a>
+      <a href="https://github.com/leon-chow" target="_blank">
+        <button mat-flat-button>
+          <img src="../../assets/icons/GitHub-Mark-32px.png">
+        </button>
+      </a>
+      <a href="https://www.linkedin.com/in/leon-chow/" target="_blank">
+        <button mat-flat-button>
+          <img class="icon" src="../../assets/icons/LI-In-Bug.png">
+        </button>
+      </a>
+      <a href="../../assets/files/Leon_Chow_Resume.pdf" target="_blank">
+        <button mat-flat-button>
+          <mat-icon > picture_as_pdf-24px </mat-icon>
         </button>
       </a>
     </span>
