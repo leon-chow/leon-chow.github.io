@@ -4,29 +4,28 @@
     <h1>
       Leon Chow
       <span class="icons">
-        <span>
-          <a href="https://github.com/leon-chow" target="_blank">
-            <button mat-flat-button>
-              <img src="../../assets/icons/GitHub-Mark-32px.png">
-            </button>
-          </a>
-          <a href="https://www.linkedin.com/in/leon-chow/" target="_blank">
-            <button mat-flat-button>
-              <img class="icon" src="../../assets/icons/LI-In-Bug.png">
-            </button>
-          </a>
-          <a href="https://www.linkedin.com/in/leon-chow/" target="_blank">
-            <button mat-flat-button>
-              <mat-icon > picture_as_pdf-24px </mat-icon>
-            </button>
-          </a>
-        </span>
+        <a href="https://github.com/leon-chow" target="_blank">
+          <button mat-icon-button>
+            <img class="icon" src="../../assets/icons/GitHub-Mark-32px.png">
+          </button>
+        </a>
+        <a href="https://www.linkedin.com/in/leon-chow/" target="_blank">
+          <button mat-icon-button>
+            <img class="icon" src="../../assets/icons/LI-In-Bug.png">
+          </button>
+        </a>
+        <a href="../../assets/files/Leon_Chow_Resume.pdf" target="_blank">
+          <button mat-icon-button>
+            <mat-icon class="icon"> picture_as_pdf-24px </mat-icon>
+          </button>
+        </a>
       </span>
     </h1>
   </span>
 </div>
-<mat-toolbar class="float-header"
-  [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
+<mat-toolbar *ngIf="isSticky" class="float-header"
+[ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}"
+[@enterAnimation]>
   <mat-toolbar-row>
     <span class="span">
       <h1>
@@ -35,23 +34,18 @@
     </span>
     <span>
       <a href="https://github.com/leon-chow" target="_blank">
-        <button mat-flat-button>
-          <img src="../../assets/icons/GitHub-Mark-32px.png">
-        </button>
-      </a>
-      <a href="https://github.com/leon-chow" target="_blank">
-        <button mat-flat-button>
+        <button mat-icon-button>
           <img src="../../assets/icons/GitHub-Mark-32px.png">
         </button>
       </a>
       <a href="https://www.linkedin.com/in/leon-chow/" target="_blank">
-        <button mat-flat-button>
+        <button mat-icon-button>
           <img class="icon" src="../../assets/icons/LI-In-Bug.png">
         </button>
       </a>
       <a href="../../assets/files/Leon_Chow_Resume.pdf" target="_blank">
-        <button mat-flat-button>
-          <mat-icon > picture_as_pdf-24px </mat-icon>
+        <button mat-icon-button>
+          <mat-icon> picture_as_pdf-24px </mat-icon>
         </button>
       </a>
     </span>
