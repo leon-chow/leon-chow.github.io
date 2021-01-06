@@ -6,3 +6,7 @@ a {
   text-align: center;
   margin-top: 50px;
 }
+
+.activated-link {
+  color: red;
+}

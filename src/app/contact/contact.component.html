@@ -3,29 +3,21 @@
     Contact Me!
   </h1>
   <p> Please fill out the form below to contact me and I will try to reach back within 3 business days. </p>
-  <form>
+  <form #contactForm="ngForm" (ngSubmit)="submitForm()">
     <div class="form-container">
-      <mat-form-field appearance="fill" required>
-        <mat-label>First Name</mat-label>
-        <input matInput>
-      </mat-form-field> <br>
-      <mat-form-field appearance="fill">
-        <mat-label>Last Name</mat-label>
-        <input matInput>
+      <mat-form-field #name appearance="fill" required>
+        <mat-label>Name</mat-label>
+        <input type="text" id="name" [(ngModel)]="form.name" name="name" #name="ngModel" matInput>
       </mat-form-field> <br>
       <mat-form-field appearance="fill">
         <mat-label>Email </mat-label>
-        <input matInput>
-      </mat-form-field> <br>
-      <mat-form-field appearance="fill">
-        <mat-label>Phone Number</mat-label>
-        <input matInput>
+        <input type="text" id="email" [(ngModel)]="form.email" name="email" #email="ngModel" matInput>
       </mat-form-field> <br>
       <mat-form-field appearance="fill">
         <mat-label>Message </mat-label>
-        <textarea matInput rows="5" cols="40"> </textarea>
+        <textarea [(ngModel)]="form.message" name="message" matInput rows="5" #message="ngModel" cols="40"> </textarea>
       </mat-form-field> <br>
-      <button mat-raised-button> Submit </button>
+      <div (click)="submitForm()" mat-raised-button> Submit </div>
     </div>
   </form>
 </div>

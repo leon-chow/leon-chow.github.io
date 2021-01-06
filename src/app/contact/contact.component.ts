@@ -1,4 +1,9 @@
+import { Form } from './form';
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
+import { ContactService } from './../contact.service';
+
 
 @Component({
   selector: 'app-contact',
@@ -7,11 +12,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  form = new Form('','','')
 
-  ngOnInit(): void {
+  constructor(private contactService: ContactService) {
   }
 
-  link = "contact";
+  ngOnInit(): void {
+    this.form.name = '';
+    this.form.email = '';
+    this.form.message = '';
 
+  }
+
+  submitForm() {
+    console.log(`name: ${this.form?.name}, email: ${this.form?.email}, message:${this.form?.email}`);
+  }
 }

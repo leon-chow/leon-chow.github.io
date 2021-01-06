@@ -9,11 +9,11 @@ import { trigger, style, animate, transition } from '@angular/animations'
       trigger(
         'enterAnimation', [
           transition(':enter', [
-            style({transform: 'ease-in', opacity: 0}),
-            animate('250ms', style({transform: 'ease-in', height: .15, opacity: 1}))
+            style({opacity: 0}),
+            animate('250ms', style({height: .15, opacity: 1}))
           ]),
           transition(':leave', [
-            animate('250ms', style({transform: 'ease-out', height: .15, opacity: 0}))
+            animate('250ms', style({height: .15, opacity: 0}))
           ])
         ]
       )
