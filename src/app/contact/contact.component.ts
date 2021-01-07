@@ -1,3 +1,4 @@
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Form } from './form';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -12,19 +13,32 @@ import { ContactService } from './../contact.service';
 })
 export class ContactComponent implements OnInit {
 
-  form = new Form('','','')
+  form = new Form('','');
 
-  constructor(private contactService: ContactService) {
+  constructor(private contactService: ContactService, public snackBar: MatSnackBar) {
   }
 
   ngOnInit(): void {
     this.form.name = '';
-    this.form.email = '';
     this.form.message = '';
+  }
 
+  submitConfirmation() {
+    this.snackBar.open("Successfully sent message!", "Dismiss", {
+      duration: 3000,
+    });
   }
 
   submitForm() {
-    console.log(`name: ${this.form?.name}, email: ${this.form?.email}, message:${this.form?.email}`);
+    this.submitConfirmation();
+    this.contactService.sendMessage(this.form).subscribe(
+      res => {
+        //console.log(res);
+      }, (error) => {
+        console.log(error);
+      }
+    );
+    this.form.name = '';
+    this.form.message = '';
   }
 }

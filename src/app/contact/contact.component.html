@@ -7,17 +7,13 @@
     <div class="form-container">
       <mat-form-field #name appearance="fill" required>
         <mat-label>Name</mat-label>
-        <input type="text" id="name" [(ngModel)]="form.name" name="name" #name="ngModel" matInput>
-      </mat-form-field> <br>
-      <mat-form-field appearance="fill">
-        <mat-label>Email </mat-label>
-        <input type="text" id="email" [(ngModel)]="form.email" name="email" #email="ngModel" matInput>
+        <input required type="text" id="name" [(ngModel)]="form.name" name="name" #name="ngModel" matInput>
       </mat-form-field> <br>
       <mat-form-field appearance="fill">
         <mat-label>Message </mat-label>
-        <textarea [(ngModel)]="form.message" name="message" matInput rows="5" #message="ngModel" cols="40"> </textarea>
+        <textarea required [(ngModel)]="form.message" name="message" matInput rows="5" #message="ngModel" cols="40"> </textarea>
       </mat-form-field> <br>
-      <div (click)="submitForm()" mat-raised-button> Submit </div>
+      <button type="submit" [disabled]="!contactForm.form.valid" mat-raised-button> Submit </button>
     </div>
   </form>
 </div>
