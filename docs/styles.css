@@ -600,10 +600,10 @@ html, body {
 body {
   background-color: #eee;
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Arial;
 }
 p {
-  font-size: 18px;
+  font-size: 1rem;
 }
 .img {
   box-shadow: 1px 2px 8px #888888;
