@@ -4,9 +4,16 @@ a {
 
 .links {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 3rem;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem;
 }
 
-.activated-link {
-  color: red;
+.link {
+  margin: 20px;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: bold;
 }
+

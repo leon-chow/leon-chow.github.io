@@ -11,6 +11,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatGridList, MatGridListModule } from '@angular/material/grid-list'
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatButtonToggleModule } from '@angular/material/button-toggle'
 
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -47,6 +48,7 @@ import { HeaderComponent } from './header/header.component';
     MatIconModule,
     MatGridListModule,
     MatSnackBarModule,
+    MatButtonToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

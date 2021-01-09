@@ -30,14 +30,21 @@
 
 h1 {
   font-family: Arial;
-  font-size: 30px;
+  font-size: 45px;
   font-size: bold;
+  text-align: center;
+}
+
+p {
+  font-family: Arial;
+  font-size: 1rem;
+  text-align: center;
 }
 
 .title {
   margin: auto;
   text-align: center;
-  margin-left: 120px;
+  margin-left: 15rem;
   width: 100%;
 }
 
