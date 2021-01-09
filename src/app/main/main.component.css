@@ -5,8 +5,9 @@
 .drawer {
   width: auto;
   height: auto;
-  background-color: #eee;
+  background-color: white;
   padding-right: 10px;
+  overflow: auto;
 }
 
 .mat-drawer {
