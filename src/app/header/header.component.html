@@ -1,33 +1,6 @@
-<div class="header">
-  <title> Leon Chow </title>
-  <span class="title">
-    <h1>
-      Leon Chow
-      <span class="icons">
-        <a href="https://github.com/leon-chow" target="_blank">
-          <button mat-icon-button>
-            <img class="icon" src="../../assets/icons/GitHub-Mark-32px.png">
-          </button>
-        </a>
-        <a href="https://www.linkedin.com/in/leon-chow/" target="_blank">
-          <button mat-icon-button>
-            <img class="icon" src="../../assets/icons/LI-In-Bug.png">
-          </button>
-        </a>
-        <a href="../../assets/files/Leon_Chow_Resume.pdf" target="_blank">
-          <button mat-icon-button>
-            <mat-icon class="icon"> picture_as_pdf-24px </mat-icon>
-          </button>
-        </a>
-      </span>
-    </h1>
-  </span>
-</div>
-<mat-toolbar *ngIf="isSticky" class="float-header"
-[ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}"
-[@enterAnimation]>
+<mat-toolbar class="header">
   <mat-toolbar-row>
-    <span class="span">
+    <span class="title">
       <h1>
         Leon Chow
       </h1>
@@ -45,7 +18,35 @@
       </a>
       <a href="../../assets/files/Leon_Chow_Resume.pdf" target="_blank">
         <button mat-icon-button>
-          <mat-icon> picture_as_pdf-24px </mat-icon>
+          <mat-icon> picture_as_pdf </mat-icon>
+        </button>
+      </a>
+    </span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-toolbar *ngIf="isSticky" class="float-header"
+[ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}"
+[@enterAnimation]>
+  <mat-toolbar-row>
+    <span class="title">
+      <h1>
+        Leon Chow
+      </h1>
+    </span>
+    <span>
+      <a href="https://github.com/leon-chow" target="_blank">
+        <button mat-icon-button>
+          <img src="../../assets/icons/GitHub-Mark-32px.png">
+        </button>
+      </a>
+      <a href="https://www.linkedin.com/in/leon-chow/" target="_blank">
+        <button mat-icon-button>
+          <img class="icon" src="../../assets/icons/LI-In-Bug.png">
+        </button>
+      </a>
+      <a href="../../assets/files/Leon_Chow_Resume.pdf" target="_blank">
+        <button mat-icon-button>
+          <mat-icon> picture_as_pdf </mat-icon>
         </button>
       </a>
     </span>
