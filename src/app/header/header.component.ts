@@ -23,6 +23,7 @@ import { trigger, style, animate, transition } from '@angular/animations'
 export class HeaderComponent implements OnInit {
   isSticky: boolean = false;
   mobileScreen: boolean = false;
+  toggleDropdown: boolean = false;
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {

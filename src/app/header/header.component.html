@@ -1,11 +1,11 @@
 <mat-toolbar class="header">
   <mat-toolbar-row>
-    <span [ngClass]="'!mobileScreen : .title'">
+    <span [ngClass]="'!mobileScreen ? title'">
       <h1>
         Leon Chow
       </h1>
     </span>
-    <span class="span">
+    <span>
       <button mat-icon-button>
         <a href="https://github.com/leon-chow" target="_blank">
           <img src="../../assets/icons/GitHub-Mark-32px.png">
@@ -31,12 +31,12 @@
 [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}"
 [@enterAnimation]>
   <mat-toolbar-row>
-    <span>
+    <span class="title">
       <h1>
         Leon Chow
       </h1>
     </span>
-    <span>
+    <span class="icons">
       <button mat-icon-button>
         <a href="https://github.com/leon-chow" target="_blank">
           <img src="../../assets/icons/GitHub-Mark-32px.png">
