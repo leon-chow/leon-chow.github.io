@@ -15,7 +15,7 @@ const routes: Routes = [
     path: '**', pathMatch: 'full', redirectTo: ''
   },
   {
-    path: 'resume', redirectTo: '../../assets/Leon_Chow_Resume.pdf'
+    path: 'resume', redirectTo: '../assets/files/Leon_Chow_Resume.pdf'
   }
 ];
 

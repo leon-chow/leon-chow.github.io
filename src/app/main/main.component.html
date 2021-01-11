@@ -1,12 +1,12 @@
 <div class="drawer">
-  <mat-drawer-container class="drawer">
+  <mat-drawer-container autosize class="drawer">
     <mat-drawer class="side-drawer" mode="side" opened>
       <app-navbar> </app-navbar>
     </mat-drawer>
     <mat-drawer-content>
       <div align="center">
         <h1> Welcome to my personal website! </h1>
-        <p> Below, you will find a list of my personal projects that I have done. </p>
+        <img class="hero-image" src="../../assets/images/flowers.jpg">
         <app-projects [attr.id]="links[1]"> </app-projects>
         <app-about [attr.id]="links[0]"> </app-about>
         <app-contact [attr.id]="links[2]"> </app-contact>

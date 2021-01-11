@@ -1,15 +1,20 @@
-.body {
-  height: 100%;
-}
-
 .drawer {
   width: auto;
   height: auto;
   background-color: #eee;
   padding-right: 10px;
+  overflow-x: hidden;
 }
 
 .mat-drawer {
   position: fixed;
   margin-top: 4.1rem;
+  background-color: #D4F1F4;
+  overflow-x: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  margin: 10px;
+  overflow: hidden;
 }
