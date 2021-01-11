@@ -17,3 +17,7 @@ a {
   font-weight: bold;
 }
 
+.link:hover {
+  background-color: #f2f2f2;
+}
+
