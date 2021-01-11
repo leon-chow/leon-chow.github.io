@@ -1,7 +1,7 @@
 .drawer {
   width: auto;
   height: auto;
-  background-color: #eee;
+  background-color: white;
   padding-right: 10px;
   overflow-x: hidden;
 }
@@ -10,7 +10,6 @@
   position: fixed;
   margin-top: 4.1rem;
   background-color: #D4F1F4;
-  overflow-x: hidden;
 }
 
 .hero-image {

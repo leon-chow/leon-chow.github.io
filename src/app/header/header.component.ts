@@ -22,15 +22,23 @@ import { trigger, style, animate, transition } from '@angular/animations'
 
 export class HeaderComponent implements OnInit {
   isSticky: boolean = false;
+  mobileScreen: boolean = false;
+  toggleDropdown: boolean = false;
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
     this.isSticky = window.pageYOffset >= 50;
   }
 
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    console.log(`height: ${window.innerHeight}, width: ${window.innerWidth}`);
+    this.mobileScreen = window.innerHeight <= 800 && window.innerWidth <= 800;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
+    this.mobileScreen = window.innerHeight <= 800 && window.innerWidth <= 800;
   }
-
 }
