@@ -1,8 +1,16 @@
 
 .projects {
   padding: 2rem;
+  background-color: #D4F1F4;
+  margin: 30px;
+  box-shadow: 1px 2px 8px #888888;
 }
 
 .icon {
   height: 32px;
+}
+
+.button {
+  height: 35px;
+  border-color: gray;
 }
