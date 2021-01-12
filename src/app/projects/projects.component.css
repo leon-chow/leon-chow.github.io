@@ -8,9 +8,10 @@
 
 .icon {
   height: 32px;
+  margin: 5px;
 }
 
 .button {
-  height: 35px;
+  height: 40px;
   border-color: gray;
 }
