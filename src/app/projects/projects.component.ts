@@ -12,7 +12,7 @@ export class ProjectsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
+    this.cols = window.innerHeight <= 800 && window.innerWidth <= 800 ? 1 : 2;
   }
 
   @HostListener('window:resize', ['$event'])

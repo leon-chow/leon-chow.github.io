@@ -21,6 +21,7 @@ import { trigger, style, animate, transition } from '@angular/animations'
 })
 
 export class HeaderComponent implements OnInit {
+  links: Array<string> = ['Projects', 'About', 'Contact'];
   isSticky: boolean = false;
   mobileScreen: boolean = false;
   toggleDropdown: boolean = false;
