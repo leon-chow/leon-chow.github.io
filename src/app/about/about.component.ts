@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
@@ -8,22 +8,26 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class AboutComponent implements OnInit {
   dataSource: any;
+  mobileScreen: boolean = false;
   cols: string[] =["language", "framework", "editor", "database"];
   skills: {}[] = [
     {
-      language: "JavaScript/TypeScript", framework: "Angular", editor: "Visual Studio Code", database: "MySQL"
+      language: "TypeScript", framework: "Angular", editor: "Visual Studio Code", database: "MySQL"
     },
     {
-      language: "HTML/CSS", framework: "Angular Material", editor: "IDEA IntelliJ", database: "MongoDB"
+      language: "JavaScript", framework: "Angular Material", editor: "IDEA IntelliJ", database: "MongoDB"
     },
     {
-      language: "Java", framework: "RxJS", editor: "Jupyter Notebook", database: "PostgreSQL"
+      language: "HTML/CSS", framework: "RxJS", editor: "Jupyter Notebook", database: "PostgreSQL"
     },
     {
-      language: "Dart", framework: "Flutter", editor: "Spyder", database: "Firebase"
+      language: "Dart", framework: "Flutter", editor: "Eclipse", database: "Firebase"
     },
     {
-      language: "Python", framework: "Bootstrap", editor: "Git"
+      language: "Java", framework: "Bootstrap", editor: "Git"
+    },
+    {
+      language: "Python"
     },
     {
       language: "PHP"
@@ -33,9 +37,16 @@ export class AboutComponent implements OnInit {
     }
   ]
 
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    console.log(`height: ${window.innerHeight}, width: ${window.innerWidth}`);
+    this.mobileScreen = window.innerHeight <= 600 || window.innerWidth <= 600;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
+    this.mobileScreen = window.innerHeight <= 600 || window.innerWidth <= 600;
     this.dataSource = new MatTableDataSource(this.skills);
   }
 
