@@ -12,13 +12,13 @@ export class ProjectsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.cols = window.innerHeight <= 800 && window.innerWidth <= 800 ? 1 : 2;
+    this.cols = window.innerHeight <= 600 || window.innerWidth <= 600 ? 1 : 2;
   }
 
   @HostListener('window:resize', ['$event'])
   onResize() {
     console.log(`height: ${window.innerHeight}, width: ${window.innerWidth}`);
-    this.cols = window.innerHeight <= 800 && window.innerWidth <= 800 ? 1 : 2;
+    this.cols = window.innerHeight <= 600 || window.innerWidth <= 600 ? 1 : 2;
   }
 
 }
