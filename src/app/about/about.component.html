@@ -8,76 +8,36 @@
     bottom of the page, or you can email me at <u> leonwl.chow@gmail.com. </u>
   </p>
   <h2> Technical Skills Overview </h2>
-  <mat-grid-list cols="3" rowHeight="12rem" rowWidth="3rem">
-    <mat-grid-tile>
-      <div>
-        <h3>
-          Languages
-        </h3>
-        <ul>
-          <li>
-            JavaScript
-          </li>
-          <li>
-            HTML/CSS
-          </li>
-          <li>
-            Java
-          </li>
-          <li>
-            Python
-          </li>
-          <li>
-            Dart
-          </li>
-          <li>
-            PHP
-          </li>
-          <li>
-            C++
-          </li>
-        </ul>
-      </div>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <div>
-        <h3> Frameworks & Libraries </h3>
-        <ul>
-          <li>
-            Angular
-          </li>
-          <li>
-            Angular Material
-          </li>
-          <li>
-            RxJS
-          </li>
-          <li>
-            Flutter
-          </li>
-        </ul>
-      </div>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <div>
-        <h3> Editors/IDEs & Version Control </h3>
-        <ul>
-          <li>
-            Visual Studio Code
-          </li>
-          <li>
-            IDEA IntelliJ
-          </li>
-          <li>
-            Jupyter Notebook
-          </li>
-          <li>
-            Git
-          </li>
-        </ul>
-      </div>
-    </mat-grid-tile>
-  </mat-grid-list>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- language Column -->
+    <ng-container matColumnDef="language">
+      <th mat-header-cell *matHeaderCellDef> Languages </th>
+      <td mat-cell *matCellDef="let skillsOverview"> {{skillsOverview.language}} </td>
+    </ng-container>
+
+    <!-- framework Column -->
+    <ng-container matColumnDef="framework">
+      <th mat-header-cell *matHeaderCellDef> Frameworks & Libraries </th>
+      <td mat-cell *matCellDef="let skillsOverview"> {{skillsOverview.framework}} </td>
+    </ng-container>
+
+    <!-- Editors/IDEs & Version Control Column -->
+    <ng-container matColumnDef="editor">
+      <th mat-header-cell *matHeaderCellDef> Editors/IDEs & Version Control </th>
+      <td mat-cell *matCellDef="let skillsOverview"> {{skillsOverview.editor}} </td>
+    </ng-container>
+    <ng-container matColumnDef="database">
+      <th mat-header-cell *matHeaderCellDef> Databases </th>
+      <td mat-cell *matCellDef="let skillsOverview"> {{skillsOverview.database}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="cols"></tr>
+    <tr mat-row *matRowDef="let row; columns: cols;"></tr>
+  </table>
   <h2> Links about me </h2>
   <ul>
     <li>

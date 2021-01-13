@@ -1,9 +1,13 @@
 .about {
   background-color: #D4F1F4;
-  margin: 30px;
+  margin: 20px;
+  padding: 10px;
   box-shadow: 1px 2px 8px #888888;
 }
 
+.grid-tile {
+  text-align: left;
+}
 
 .img {
   width: 25%;
@@ -25,4 +29,10 @@ a:hover {
 
 h3 {
   font-weight: bold;
+}
+
+table {
+  width: 75%;
+  padding: 10px;
+  margin: 10px;
 }

@@ -12,12 +12,12 @@ export class MainComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.mobileScreen = window.innerHeight <= 800 && window.innerWidth <= 800;
+    this.mobileScreen = window.innerHeight <= 600 || window.innerWidth <= 600;
   }
 
   @HostListener('window:resize', ['$event'])
   onResize() {
     console.log(`height: ${window.innerHeight}, width: ${window.innerWidth}`);
-    this.mobileScreen = window.innerHeight <= 800 && window.innerWidth <= 800;
+    this.mobileScreen = window.innerHeight <= 600 || window.innerWidth <= 600;
   }
 }

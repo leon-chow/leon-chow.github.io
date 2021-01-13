@@ -12,6 +12,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatGridList, MatGridListModule } from '@angular/material/grid-list'
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatButtonToggleModule } from '@angular/material/button-toggle'
+import { MatTableModule } from '@angular/material/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,6 +24,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { MainComponent } from './main/main.component';
 import { HeaderComponent } from './header/header.component';
+import { fromEventPattern } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,7 @@ import { HeaderComponent } from './header/header.component';
     MatGridListModule,
     MatSnackBarModule,
     MatButtonToggleModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

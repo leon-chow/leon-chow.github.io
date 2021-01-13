@@ -44,13 +44,14 @@ p {
 .title {
   margin: auto;
   text-align: center;
-  margin-left: 15rem;
+  padding-left: 18rem;
   width: 100%;
 }
 
 .mobile-title {
   text-align: left;
-  margin-left: 0;
+  padding-left: 0px;
+  width: 100%;
 }
 
 .icons {
