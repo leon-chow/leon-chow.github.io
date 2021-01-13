@@ -8,7 +8,7 @@
     bottom of the page, or you can email me at <u> leonwl.chow@gmail.com. </u>
   </p>
   <h2> Technical Skills Overview </h2>
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" *ngIf="!mobileScreen" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
@@ -37,6 +37,53 @@
 
     <tr mat-header-row *matHeaderRowDef="cols"></tr>
     <tr mat-row *matRowDef="let row; columns: cols;"></tr>
+  </table>
+  <table *ngIf="mobileScreen">
+    <tr>
+      <th> Languages </th>
+      <th> Frameworks & Libraries </th>
+      <th> Editors/IDEs & Version Control</th>
+      <th> Databases </th>
+    </tr>
+    <tr>
+      <td> TypeScript </td>
+      <td> Angular </td>
+      <td> VS Code </td>
+      <td> MySql</td>
+    </tr>
+    <tr>
+      <td> JavaScript </td>
+      <td> Angular Material </td>
+      <td> IDEA IntelliJ </td>
+      <td> MongoDB </td>
+    </tr>
+    <tr>
+      <td> HTML/CSS </td>
+      <td> RxJS </td>
+      <td> Jupyter Notebook </td>
+      <td> PostgreSQL </td>
+    </tr>
+    <tr>
+      <td> Dart </td>
+      <td> Flutter </td>
+      <td> Spyder </td>
+      <td> Firebase </td>
+    </tr>
+    <tr>
+      <td> Java </td>
+      <td> Bootstrap </td>
+      <td> Git </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> Python </td>
+    </tr>
+    <tr>
+      <td> PHP </td>
+    </tr>
+    <tr>
+      <td> C++ </td>
+    </tr>
   </table>
   <h2> Links about me </h2>
   <ul>
