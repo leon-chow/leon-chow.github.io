@@ -1,4 +1,4 @@
-<div class="projects">
+<div [ngClass]="{'projects': mobileScreen === false, 'projects-mobile': mobileScreen === true}">
   <h1> Personal Projects </h1>
   <mat-grid-list [cols]="cols" rowHeight="52rem" rowWidth="3rem">
     <mat-grid-tile>
