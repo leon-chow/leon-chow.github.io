@@ -5,6 +5,11 @@
   box-shadow: 1px 2px 8px #888888;
 }
 
+.about-mobile {
+  background-color: #D4F1F4;
+  padding: 10px;
+}
+
 .grid-tile {
   text-align: left;
 }
@@ -31,12 +36,21 @@ h3 {
   font-weight: bold;
 }
 
-table {
-  width: 75%;
-  padding: 10px;
+.mobile-table {
+  width: 300px;
   margin: 10px;
+}
+
+table {
+  width: auto;
+  overflow-x: auto;
 }
 
 th {
   text-align: left;
+  text-overflow: ellipsis;
+}
+
+td {
+  text-overflow: ellipsis;
 }

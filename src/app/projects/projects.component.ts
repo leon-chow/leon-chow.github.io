@@ -7,18 +7,21 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
   cols: number = 2;
+  mobileScreen: boolean = false;
   rowHeight: string = '52rem';
   rowWidth: string = '3rem';
   constructor() { }
 
   ngOnInit(): void {
-    this.cols = window.innerHeight <= 600 || window.innerWidth <= 600 ? 1 : 2;
+    this.mobileScreen = window.innerHeight <= 600 || window.innerWidth <= 600 ? true : false;
+    this.cols = this.mobileScreen ? this.cols = 1 : this.cols = 2;
   }
 
   @HostListener('window:resize', ['$event'])
   onResize() {
     console.log(`height: ${window.innerHeight}, width: ${window.innerWidth}`);
-    this.cols = window.innerHeight <= 600 || window.innerWidth <= 600 ? 1 : 2;
+    this.mobileScreen = window.innerHeight <= 600 || window.innerWidth <= 600 ? true : false;
+    this.cols = this.mobileScreen ? this.cols = 1 : this.cols = 2;
   }
 
 }

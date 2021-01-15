@@ -6,6 +6,12 @@
   box-shadow: 1px 2px 8px #888888;
 }
 
+.projects-mobile {
+  padding: 2rem;
+  background-color: #D4F1F4;
+}
+
+
 .icon {
   height: 32px;
   padding-top: 3px;
