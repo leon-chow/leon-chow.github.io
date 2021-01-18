@@ -11,8 +11,26 @@
 }
 
 .hero-image {
-  width: 100%;
-  margin: 10px;
-  overflow: hidden;
+  width: 98%;
 }
 
+.hero-div {
+  position: relative;
+  width: auto;
+  height: auto;
+  text-align: center;
+}
+
+.hero-text, .mobile-hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: black;
+  text-shadow: 1px 1px white;
+}
+
+.mobile-hero-text {
+  font-size: 25px;
+}

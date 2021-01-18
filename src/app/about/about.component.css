@@ -8,6 +8,7 @@
 .about-mobile {
   background-color: #D4F1F4;
   padding: 10px;
+  box-shadow: 1px 2px 8px #888888;
 }
 
 .grid-tile {
@@ -32,18 +33,21 @@ a:hover {
   color: red;
 }
 
+h1 {
+  font-size: 32px;
+}
+
 h3 {
   font-weight: bold;
 }
 
 .mobile-table {
-  width: 300px;
   margin: 10px;
 }
 
 table {
-  width: auto;
-  overflow-x: auto;
+  width: 75%;
+  margin: 10px;
 }
 
 th {
