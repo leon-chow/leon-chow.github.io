@@ -8,8 +8,6 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class ProjectsComponent implements OnInit {
   cols: number = 2;
   mobileScreen: boolean = false;
-  rowHeight: string = '52rem';
-  rowWidth: string = '3rem';
   constructor() { }
 
   ngOnInit(): void {
