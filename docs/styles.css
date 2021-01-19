@@ -598,9 +598,9 @@ html, body {
   height: 100%;
 }
 body {
-  background-color: white;
+  background-color: #DDAF6D;
   margin: 0;
-  font-family: Arial;
+  font-family: Open Sans;
 }
 p {
   font-size: 1rem;
@@ -609,6 +609,5 @@ p {
   box-shadow: 1px 2px 8px #888888;
   width: 100%;
 }
-
 
 /*# sourceMappingURL=styles.css.map*/
