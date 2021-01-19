@@ -1,0 +1,47 @@
+@import "../global_styles.scss";
+
+h1 {
+  font-family: $main-font;
+  font-size: 32px;
+}
+
+.form-container {
+  display: table;
+  color: $main-font-color;
+}
+
+.form-label {
+  float: left;
+  padding: 10px;
+  margin: 10px;
+  color: $main-font-color;
+}
+
+.form-element {
+  float: right;
+  padding: 10px;
+  margin: 10px;
+  background-color: $main-color;
+  color: $main-font-color;
+}
+
+.contact-form {
+  padding: 10px;
+  background-color: $main-color;
+  color: $main-font-color;
+  margin: 20px;
+  box-shadow: 1px 2px 8px #888888;
+}
+
+.contact-form-mobile {
+  padding: 10px;
+  background-color: $main-color;
+  color: $main-font-color;
+  box-shadow: 1px 2px 8px #888888;
+}
+
+::ng-deep .mat-form-field-label {
+  /*change color of label*/
+  color: $main-font-color !important;
+ }
+

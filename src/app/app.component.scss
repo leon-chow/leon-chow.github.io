@@ -1,21 +1,22 @@
+@import "/src/app/global_styles.scss";
 /* App-wide Styles */
 h1 {
   color: #369;
-  font-family: Arial;
+  font-family: $main-font;
   font-size: 3.5rem;
   font-size: bold;
 }
 
 h2, h3 {
   color: #444;
-  font-family: Arial;
+  font-family: $main-font;
   font-weight: lighter;
   font-size: 3rem;
 }
 
 body, input[type="text"], button {
   color: #333;
-  font-family: Arial;
+  font-family: $main-font;
 }
 
 /* everywhere else */

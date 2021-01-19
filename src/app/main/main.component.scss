@@ -1,13 +1,15 @@
+@import "../global_styles.scss";
+
 .drawer {
   width: auto;
   height: auto;
-  background-color: white;
+  background-color: $main-background-color;
 }
 
 .mat-drawer {
   position: fixed;
-  margin-top: 4.1rem;
-  background-color: #D4F1F4;
+  margin-top: 4rem;
+  background-color: $main-color;
 }
 
 .hero-image {
