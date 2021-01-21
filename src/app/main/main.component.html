@@ -1,12 +1,12 @@
 <div class="drawer">
   <mat-drawer-container autosize class="drawer">
-    <mat-drawer class="side-drawer" *ngIf="!mobileScreen" mode="side" opened="!mobileScreen">
+    <mat-drawer class="side-drawer" *ngIf="!this.resizeService.mobileScreen" mode="side" opened="!this.resizeService.mobileScreen">
       <app-navbar> </app-navbar>
     </mat-drawer>
     <mat-drawer-content>
       <div align="center">
         <div class="hero-div">
-          <div [ngClass]="{'hero-text': mobileScreen === false, 'mobile-hero-text': mobileScreen === true}"> Welcome to my Website! </div>
+          <div [ngClass]="{'hero-text': this.resizeService.mobileScreen === false, 'mobile-hero-text': this.resizeService.mobileScreen === true}"> Welcome to my Website! </div>
           <img class="hero-image" src="../../assets/images/sky.jpg">
         </div>
         <app-projects [attr.id]="links[1]"> </app-projects>

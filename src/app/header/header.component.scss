@@ -1,10 +1,11 @@
 @import "../global_styles.scss";
 
 .header {
-  margin-bottom: 10px;
   background-color: $main-color;
   box-shadow: 1px 2px 8px #888888;
   text-align: left;
+  margin-bottom: 10px;
+  width: auto;
 }
 
 .float-header {
@@ -14,14 +15,10 @@
   top: 0;
   height: 0;
   opacity: 0;
-
-  cursor: default;
-  user-select: none;
   display: hidden;
 }
 
 .sticky {
-  height: 64px;
   opacity: 1;
   z-index: 2;
 }
@@ -29,10 +26,11 @@
 h1 {
   font-family: $main-font;
   color: $main-font-color;
-  font-size: 45px;
+  font-size: 2.5rem;
   font-size: bold;
   text-align: left;
   position: relative;
+  padding-right: 10px;
 }
 
 p {
@@ -49,7 +47,6 @@ p {
 
 .mobile-title {
   text-align: left;
-  padding-left: 0px;
   width: 100%;
 }
 
@@ -61,7 +58,7 @@ p {
 
 .icon {
   margin: 10px 10px 10px 10px;
-  height: 30px;
+  height: 2rem;
   background-color: $main-font-color;
   color: $main-font-color;
 }

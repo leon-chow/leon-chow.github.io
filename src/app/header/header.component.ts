@@ -1,3 +1,4 @@
+import { ResizeService } from './../resize.service';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { trigger, style, animate, transition } from '@angular/animations'
 
@@ -23,7 +24,6 @@ import { trigger, style, animate, transition } from '@angular/animations'
 export class HeaderComponent implements OnInit {
   links: Array<string> = ['Projects', 'About', 'Contact'];
   isSticky: boolean = false;
-  mobileScreen: boolean = false;
   toggleDropdown: boolean = false;
 
   @HostListener('window:scroll', ['$event'])
@@ -31,15 +31,8 @@ export class HeaderComponent implements OnInit {
     this.isSticky = window.pageYOffset >= 50;
   }
 
-  @HostListener('window:resize', ['$event'])
-  onResize() {
-    console.log(`height: ${window.innerHeight}, width: ${window.innerWidth}`);
-    this.mobileScreen = window.innerHeight <= 600 || window.innerWidth <= 600;
-  }
-
-  constructor() { }
+  constructor(public resizeService: ResizeService) { }
 
   ngOnInit(): void {
-    this.mobileScreen = window.innerHeight <= 600 || window.innerWidth <= 600;
   }
 }

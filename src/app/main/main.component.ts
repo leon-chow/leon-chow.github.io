@@ -1,4 +1,5 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { ResizeService } from './../resize.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-main',
@@ -7,17 +8,9 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
   links: Array<string> = ['About', 'Projects', 'Contact'];
-  mobileScreen: boolean = false;
 
-  constructor() { }
+  constructor(public resizeService: ResizeService) { }
 
   ngOnInit(): void {
-    this.mobileScreen = window.innerHeight <= 600 || window.innerWidth <= 600;
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize() {
-    console.log(`height: ${window.innerHeight}, width: ${window.innerWidth}`);
-    this.mobileScreen = window.innerHeight <= 600 || window.innerWidth <= 600;
   }
 }

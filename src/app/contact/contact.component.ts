@@ -1,3 +1,4 @@
+import { ResizeService } from './../resize.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Form } from './form';
 import { Component, HostListener, OnInit } from '@angular/core';
@@ -12,22 +13,14 @@ import { ContactService } from './../contact.service';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  mobileScreen: boolean = false;
   form = new Form('','');
 
-  constructor(private contactService: ContactService, public snackBar: MatSnackBar) {
+  constructor(private contactService: ContactService, public snackBar: MatSnackBar, public resizeService: ResizeService) {
   }
 
   ngOnInit(): void {
-    this.mobileScreen = window.innerHeight <= 600 || window.innerWidth <= 600 ? true : false;
     this.form.name = '';
     this.form.message = '';
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize() {
-    console.log(`height: ${window.innerHeight}, width: ${window.innerWidth}`);
-    this.mobileScreen = window.innerHeight <= 600 || window.innerWidth <= 600;
   }
 
   submitConfirmation() {

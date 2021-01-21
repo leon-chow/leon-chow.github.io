@@ -1,3 +1,4 @@
+import { ResizeService } from './resize.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -24,7 +25,6 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { MainComponent } from './main/main.component';
 import { HeaderComponent } from './header/header.component';
-import { fromEventPattern } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -53,7 +53,7 @@ import { fromEventPattern } from 'rxjs';
     MatButtonToggleModule,
     MatTableModule,
   ],
-  providers: [],
+  providers: [ResizeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

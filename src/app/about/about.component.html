@@ -1,4 +1,4 @@
-<div [ngClass]="{'about': mobileScreen === false, 'about-mobile': mobileScreen === true}">
+<div [ngClass]="{'about': this.resizeService.mobileScreen === false, 'about-mobile': this.resizeService.mobileScreen === true}">
   <h1> About Me </h1>
   <img class="img" src="../../assets/images/me_2.jpg" alt="Me"> <br> <br>
   <p>
@@ -8,7 +8,7 @@
     bottom of the page, or you can email me at <u> leonwl.chow@gmail.com. </u>
   </p>
   <h2> Technical Skills Overview </h2>
-  <table mat-table [dataSource]="dataSource" *ngIf="!mobileScreen" class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" *ngIf="!this.resizeService.mobileScreen" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
@@ -38,7 +38,7 @@
     <tr mat-header-row *matHeaderRowDef="cols"></tr>
     <tr mat-row *matRowDef="let row; columns: cols;"></tr>
   </table>
-  <table class="mobile-table" *ngIf="mobileScreen">
+  <table class="mobile-table" *ngIf="this.resizeService.mobileScreen">
     <tr>
       <th> Languages </th>
       <th> Frameworks & Libraries </th>
