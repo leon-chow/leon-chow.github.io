@@ -33,6 +33,7 @@ class ContactService {
         // exposed API, but it should be okay
         this.emailApi = 'https://mailthis.to/Leon';
     }
+    // function that takes formData as the parameter from the HTML template and sends the message
     sendMessage(formData) {
         return this.http.post(this.emailApi, formData, { responseType: 'text' }).pipe((res) => {
             if (res) {
@@ -301,6 +302,7 @@ class AboutComponent {
         ];
     }
     ngOnInit() {
+        // initializing data source instance
         this.dataSource = new _angular_material_table__WEBPACK_IMPORTED_MODULE_1__["MatTableDataSource"](this.skills);
     }
 }
@@ -316,9 +318,9 @@ AboutComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "p");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, " Hello! My name is Leon Chow and I am currently a 4th year computer science student at the Ontario Tech University (formerly UOIT). ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, " I am seeking professional experience in web/mobile development and enjoy learning new languages and technologies. Below, you can ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, " I am seeking professional experience in web/mobile development and enjoy learning new languages and technologies. Below, you can see a list ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](10, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, " find a few links about me, mostly from the university. If you wish to contact me, you can fill out the form at the ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, " of skills that I have acquired, as well as a few links about me, mostly from the university. If you wish to contact me, you can fill out the form at the ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](12, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, " bottom of the page, or you can email me at ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "u");
@@ -408,6 +410,7 @@ const environment = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Form", function() { return Form; });
+// form class data
 class Form {
     constructor(name, message) {
         this.name = name;
@@ -443,6 +446,7 @@ class AppComponent {
         this.title = 'leon-chow';
         this.mobileScreen = false;
     }
+    // onResize, checks if the width and height are less than or equal to 600, will switch to mobile view
     onResize() {
         this.resizeService.mobileScreen = window.innerHeight <= 600 || window.innerWidth <= 600;
         console.log(`Width: ${window.innerHeight}, width: ${window.innerWidth}`);
@@ -651,15 +655,18 @@ class ContactComponent {
         this.resizeService = resizeService;
         this.form = new _form__WEBPACK_IMPORTED_MODULE_0__["Form"]('', '');
     }
+    // init empty fields
     ngOnInit() {
         this.form.name = '';
         this.form.message = '';
     }
+    // confirmation that will appear once the form is valid and submitted
     submitConfirmation() {
         this.snackBar.open("Successfully sent message!", "Dismiss", {
             duration: 3000,
         });
     }
+    // handles form submission, used template driven forms here
     submitForm() {
         this.submitConfirmation();
         this.contactService.sendMessage(this.form).subscribe(res => {
@@ -799,6 +806,7 @@ class HeaderComponent {
         this.isSticky = false;
         this.toggleDropdown = false;
     }
+    // event to check if page is scrolled vertically of at least 50px, which will make the sticky header appear
     checkScroll() {
         this.isSticky = window.pageYOffset >= 50;
     }
@@ -916,6 +924,7 @@ function NavbarComponent_div_1_Template(rf, ctx) { if (rf & 1) {
 } }
 class NavbarComponent {
     constructor() {
+        // used to store the array of links
         this.links = ['Projects', 'About', 'Contact'];
     }
     ngOnInit() {
@@ -962,15 +971,19 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     {
+        // default
         path: '', component: _main_main_component__WEBPACK_IMPORTED_MODULE_2__["MainComponent"]
     },
     {
+        // wildcard, redirect
         path: '**', pathMatch: 'full', redirectTo: ''
     },
     {
+        // resume
         path: 'resume', redirectTo: '../assets/files/Leon_Chow_Resume.pdf'
     }
 ];
+// used to allow page jumping when a link is clicked, for fragments
 const routerOptions = {
     scrollPositionRestoration: 'enabled',
     anchorScrolling: 'enabled',
@@ -1028,13 +1041,14 @@ const _c0 = function (a0, a1) { return { "hero-text": a0, "mobile-hero-text": a1
 class MainComponent {
     constructor(resizeService) {
         this.resizeService = resizeService;
+        // stores the array of links for appropriate fragments
         this.links = ['About', 'Projects', 'Contact'];
     }
     ngOnInit() {
     }
 }
 MainComponent.ɵfac = function MainComponent_Factory(t) { return new (t || MainComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_resize_service__WEBPACK_IMPORTED_MODULE_1__["ResizeService"])); };
-MainComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: MainComponent, selectors: [["app-main"]], decls: 12, vars: 8, consts: [[1, "drawer"], ["autosize", "", 1, "drawer"], ["class", "side-drawer", "mode", "side", "opened", "!this.resizeService.mobileScreen", 4, "ngIf"], ["align", "center"], [1, "hero-div"], [3, "ngClass"], ["src", "../../assets/images/sky.jpg", 1, "hero-image"], ["mode", "side", "opened", "!this.resizeService.mobileScreen", 1, "side-drawer"]], template: function MainComponent_Template(rf, ctx) { if (rf & 1) {
+MainComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: MainComponent, selectors: [["app-main"]], decls: 12, vars: 8, consts: [[1, "drawer"], ["autosize", "", 1, "drawer"], ["class", "side-drawer", "mode", "side", "opened", "!this.resizeService.mobileScreen", 4, "ngIf"], ["align", "center"], [1, "hero-div"], [3, "ngClass"], ["src", "../../assets/images/night_sky.jpg", 1, "hero-image"], ["mode", "side", "opened", "!this.resizeService.mobileScreen", 1, "side-drawer"]], template: function MainComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "mat-drawer-container", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, MainComponent_mat_drawer_2_Template, 2, 0, "mat-drawer", 2);
@@ -1092,6 +1106,7 @@ __webpack_require__.r(__webpack_exports__);
 
 class ResizeService {
     constructor() {
+        // global variable to be used for screen sizes, will look into fixing this in the future when im more experienced
         this.mobileScreen = false;
     }
 }
