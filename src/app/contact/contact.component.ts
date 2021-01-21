@@ -18,17 +18,20 @@ export class ContactComponent implements OnInit {
   constructor(private contactService: ContactService, public snackBar: MatSnackBar, public resizeService: ResizeService) {
   }
 
+  // init empty fields
   ngOnInit(): void {
     this.form.name = '';
     this.form.message = '';
   }
 
+  // confirmation that will appear once the form is valid and submitted
   submitConfirmation() {
     this.snackBar.open("Successfully sent message!", "Dismiss", {
       duration: 3000,
     });
   }
 
+  // handles form submission, used template driven forms here
   submitForm() {
     this.submitConfirmation();
     this.contactService.sendMessage(this.form).subscribe(

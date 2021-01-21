@@ -9,16 +9,20 @@ import { ProjectsComponent } from './projects/projects.component';
 
 const routes: Routes = [
   {
+    // default
     path: '', component: MainComponent
   },
   {
+    // wildcard, redirect
     path: '**', pathMatch: 'full', redirectTo: ''
   },
   {
+    // resume
     path: 'resume', redirectTo: '../assets/files/Leon_Chow_Resume.pdf'
   }
 ];
 
+// used to allow page jumping when a link is clicked, for fragments
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
   anchorScrolling: 'enabled',

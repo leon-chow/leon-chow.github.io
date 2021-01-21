@@ -8,6 +8,7 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
+  // data to populate the table, hardcoded since this data will not change much
   dataSource: any;
   cols: string[] =["language", "framework", "editor", "database"];
   skills: {}[] = [
@@ -40,6 +41,7 @@ export class AboutComponent implements OnInit {
   constructor(public resizeService: ResizeService) { }
 
   ngOnInit(): void {
+    // initializing data source instance
     this.dataSource = new MatTableDataSource(this.skills);
   }
 
