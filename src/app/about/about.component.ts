@@ -1,4 +1,5 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { ResizeService } from './../resize.service';
+import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
@@ -8,7 +9,6 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class AboutComponent implements OnInit {
   dataSource: any;
-  mobileScreen: boolean = false;
   cols: string[] =["language", "framework", "editor", "database"];
   skills: {}[] = [
     {
@@ -37,16 +37,9 @@ export class AboutComponent implements OnInit {
     }
   ]
 
-  @HostListener('window:resize', ['$event'])
-  onResize() {
-    console.log(`height: ${window.innerHeight}, width: ${window.innerWidth}`);
-    this.mobileScreen = window.innerHeight <= 600 || window.innerWidth <= 600;
-  }
-
-  constructor() { }
+  constructor(public resizeService: ResizeService) { }
 
   ngOnInit(): void {
-    this.mobileScreen = window.innerHeight <= 600 || window.innerWidth <= 600;
     this.dataSource = new MatTableDataSource(this.skills);
   }
 

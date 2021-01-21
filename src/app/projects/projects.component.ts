@@ -1,3 +1,4 @@
+import { ResizeService } from './../resize.service';
 import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
@@ -7,19 +8,14 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
   cols: number = 2;
-  mobileScreen: boolean = false;
-  constructor() { }
+  constructor(public resizeService: ResizeService) { }
 
   ngOnInit(): void {
-    this.mobileScreen = window.innerHeight <= 600 || window.innerWidth <= 600 ? true : false;
-    this.cols = this.mobileScreen ? this.cols = 1 : this.cols = 2;
+    this.cols = this.resizeService.mobileScreen ? this.cols = 1 : this.cols = 2;
   }
 
   @HostListener('window:resize', ['$event'])
   onResize() {
-    console.log(`height: ${window.innerHeight}, width: ${window.innerWidth}`);
-    this.mobileScreen = window.innerHeight <= 600 || window.innerWidth <= 600 ? true : false;
-    this.cols = this.mobileScreen ? this.cols = 1 : this.cols = 2;
+    this.cols = this.resizeService.mobileScreen ? this.cols = 1 : this.cols = 2;
   }
-
 }

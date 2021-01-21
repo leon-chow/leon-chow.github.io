@@ -1,4 +1,4 @@
-<div [ngClass]="{'contact-form': mobileScreen === false, 'contact-form-mobile': mobileScreen === true}">
+<div [ngClass]="{'contact-form': this.resizeService.mobileScreen === false, 'contact-form-mobile': this.resizeService.mobileScreen === true}">
   <h1>
     Contact Me!
   </h1>

@@ -1,6 +1,6 @@
 <mat-toolbar class="header">
   <mat-toolbar-row>
-    <span [ngClass]="{'title': mobileScreen === false, 'mobile-title': mobileScreen === true}">
+    <span [ngClass]="{'title': this.resizeService.mobileScreen === false, 'mobile-title': this.resizeService.mobileScreen === true}">
       <h1>
         Leon Chow
       </h1>
@@ -31,7 +31,7 @@
 [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}"
 [@enterAnimation]>
   <mat-toolbar-row>
-    <span [ngClass]="{'title': mobileScreen === false, 'mobile-title': mobileScreen === true}">
+    <span [ngClass]="{'title': this.resizeService.mobileScreen === false, 'mobile-title': this.resizeService.mobileScreen === true}">
       <h1>
         Leon Chow
       </h1>
