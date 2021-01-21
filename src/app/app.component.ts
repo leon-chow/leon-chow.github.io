@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'leon-chow';
   mobileScreen: Boolean = false;
 
+  // onResize, checks if the width and height are less than or equal to 600, will switch to mobile view
   @HostListener('window:resize', ['$event'])
   onResize() {
     this.resizeService.mobileScreen = window.innerHeight <= 600 || window.innerWidth <= 600;

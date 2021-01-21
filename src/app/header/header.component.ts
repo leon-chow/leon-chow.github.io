@@ -26,6 +26,7 @@ export class HeaderComponent implements OnInit {
   isSticky: boolean = false;
   toggleDropdown: boolean = false;
 
+  // event to check if page is scrolled vertically of at least 50px, which will make the sticky header appear
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
     this.isSticky = window.pageYOffset >= 50;

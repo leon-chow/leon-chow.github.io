@@ -11,6 +11,7 @@ export class ContactService {
 
   constructor(private http: HttpClient) { }
 
+  // function that takes formData as the parameter from the HTML template and sends the message
   sendMessage(formData: Form) {
     return this.http.post(this.emailApi, formData, { responseType: 'text'}).pipe(
       (res: any) => {

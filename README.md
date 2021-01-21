@@ -1,8 +1,15 @@
 # My Personal Website
-https://leonchow.me
+## https://leonchow.me
+
+Hello! Welcome to my personal website. From here, you can see a list of projects that I am working on, what programming languages that I am familiar with, and what blogs I have been featured in recently. If you wish to contact me, you can fill out the form below. 
+
+This website was built using Angular and Angular Material, along with HTML/SCSS and TypeScript. 
+
+## Contributing
+If you think you found a bug on my site, or there's a typo or feature missing, feel free to file an issue or send me a pull request!
 
 ## Sources Used
-Here is a list of external resources that I used and icons. I do not own any of the icons and assets used and have followed the strict guidelines to use them. 
+Here is a list of external resources which includes icons, images and documentation that I used. I am not endorsed by any of these sources nor do I own any of the icons and assets used. I have followed the strict guidelines to use them. 
  
 - https://nc.me/landing/logo-maker
 - https://github.com/logos
@@ -10,3 +17,4 @@ Here is a list of external resources that I used and icons. I do not own any of 
 - https://material.angular.io/
 - https://material.io/
 - https://www.pexels.com/photo/brown-field-and-blue-sky-46160/
+- https://www.pexels.com/photo/silhouette-of-trees-during-nighttime-631477/
