@@ -1,7 +1,7 @@
 <div class="links">
   <div *ngFor="let link of links">
-    <button mat-raised-button class="link">
-      <a class="link-text" [routerLink]="'.'" [fragment]="link"> {{ link }} </a>
-    </button>
+    <a class="link-text" [routerLink]="'.'" [fragment]="link">
+      <button mat-flat-button class="link"> {{ link }} </button>
+    </a>
   </div>
 </div>
