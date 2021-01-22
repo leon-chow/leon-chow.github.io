@@ -1,9 +1,11 @@
 # My Personal Website
 ## https://leonchow.me
 
-Hello! Welcome to my personal website. From here, you can see a list of projects that I am working on, what programming languages that I am familiar with, and what blogs I have been featured in recently. If you wish to contact me, you can fill out the form below. 
+## Description 
 
-This website was built using Angular and Angular Material, along with HTML/SCSS and TypeScript. 
+Hello! Welcome to my personal website. From here, you can see a list of projects that I am working on, what programming languages that I am familiar with, and what blogs I have been featured in recently. If you wish to contact me, you can fill out the form at the bottom of the page. 
+
+This website was built using Angular, Angular Material, HTML/CSS and TypeScript. 
 
 ## Contributing
 If you think you found a bug on my site, or there's a typo or feature missing, feel free to file an issue or send me a pull request!
