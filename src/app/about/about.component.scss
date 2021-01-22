@@ -11,7 +11,7 @@
 .about-mobile {
   background-color: $main-color;
   color: $main-font-color;
-  padding: 10px;
+  padding-bottom: 10px;
   box-shadow: 1px 2px 8px #888888;
 }
 
@@ -51,9 +51,16 @@ h3 {
   font-weight: bold;
 }
 
+p {
+  width: 75%;
+}
+
+// overflows on screens smaller than 350px, look into fixing this in the future
 .mobile-table {
   margin: 0px;
   padding: 0px;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
 }
 
 table {
@@ -64,10 +71,11 @@ table {
 
 th {
   text-align: left;
-  text-overflow: ellipsis;
   padding-right: 15px;
+  font-size: 1rem;
+
 }
 
 td {
-  text-overflow: ellipsis;
+  width: auto;
 }
