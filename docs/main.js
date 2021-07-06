@@ -316,7 +316,7 @@ AboutComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, " Hello! My name is Leon Chow and I am currently a 4th year computer science student at the Ontario Tech University (formerly UOIT). I am seeking professional experience in web/mobile development and enjoy learning new languages and technologies. Below, you can see a list of skills that I have acquired, as well as a few links about me, mostly from the university. If you wish to contact me, you can fill out the form at the bottom of the page, or you can email me at ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, " Hello! My name is Leon Chow and I am a recent graduate from the Ontario Tech University (formerly UOIT) and I currently work for Slalom Build. I enjoy working with web development and like to learn new languages and technologies. Below, you can see a list of skills that I have acquired, as well as a few links about me, mostly from the university. If you wish to contact me, you can fill out the form at the bottom of the page, or you can email me at ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "u");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, " leonwl.chow@gmail.com. ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
