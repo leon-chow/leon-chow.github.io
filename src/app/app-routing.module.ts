@@ -16,10 +16,6 @@ const routes: Routes = [
     // wildcard, redirect
     path: '**', pathMatch: 'full', redirectTo: ''
   },
-  {
-    // resume
-    path: 'resume', redirectTo: '../assets/files/Leon_Chow_Resume.pdf'
-  }
 ];
 
 // used to allow page jumping when a link is clicked, for fragments
