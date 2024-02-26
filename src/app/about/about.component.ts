@@ -13,28 +13,28 @@ export class AboutComponent implements OnInit {
   cols: string[] =["language", "framework", "editor", "database"];
   skills: {}[] = [
     {
-      language: "TypeScript", framework: "Angular", editor: "Visual Studio Code", database: "MySQL"
+      language: "React", framework: "NodeJS", editor: "AWS", database: "SQL/NoSQL"
     },
     {
-      language: "JavaScript", framework: "Angular Material", editor: "IDEA IntelliJ", database: "MongoDB"
+      language: "Vue", framework: "Java", editor: "GCP", database: "CI/CD"
     },
     {
-      language: "HTML/CSS", framework: "RxJS", editor: "Jupyter Notebook", database: "PostgreSQL"
+      language: "Angular", editor: "Firebase", 
     },
     {
-      language: "Dart", framework: "Flutter", editor: "Eclipse", database: "Firebase"
+      language: "HTML/CSS", editor: "DynamoDB",
     },
     {
-      language: "Java", framework: "Bootstrap", editor: "Git"
+      language: "Material UI", editor: "S3",
     },
     {
-      language: "Python"
+      language: "Bootstrap"
     },
     {
-      language: "PHP"
+      language: "NextJS"
     },
     {
-      language: "C++"
+      language: "JavaScript/TypeScript"
     }
   ]
 

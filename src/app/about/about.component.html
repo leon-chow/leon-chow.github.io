@@ -1,9 +1,9 @@
 <div [ngClass]="{'about': this.resizeService.mobileScreen === false, 'about-mobile': this.resizeService.mobileScreen === true}">
   <h1> About Me </h1>
-  <img class="img" src="../../assets/images/me_2.jpg" alt="Me"> <br> <br>
+  <img class="img" src="../../assets/images/me.jpg" alt="Me"> <br> <br>
   <p>
-    Hello! My name is Leon Chow and I am a recent graduate from the Ontario Tech University (formerly UOIT) and I currently work for Slalom Build.
-    I enjoy working with web development and like to learn new languages and technologies. Below, you can see a list
+    Hello! My name is Leon Chow and I am full-stack developer with 3.5 years of experience in the field. I graduated with a degree in computer science at Ontario Tech University (formerly UOIT).
+    I am always seeking to broaden my professional experience in web/mobile development and enjoy learning new languages and technologies. Below, you can see a list
     of skills that I have acquired, as well as a few links about me, mostly from the university. If you wish to contact me, you can fill out the form at the
     bottom of the page, or you can email me at <u> leonwl.chow@gmail.com. </u>
   </p>
@@ -17,17 +17,17 @@
 
     <!-- framework Column -->
     <ng-container matColumnDef="framework">
-      <th mat-header-cell *matHeaderCellDef> Frameworks & Libraries </th>
+      <th mat-header-cell *matHeaderCellDef> Backend </th>
       <td mat-cell *matCellDef="let skillsOverview"> {{skillsOverview.framework}} </td>
     </ng-container>
 
     <!-- Editors/IDEs & Version Control Column -->
     <ng-container matColumnDef="editor">
-      <th mat-header-cell *matHeaderCellDef> Editors/IDEs & Version Control </th>
+      <th mat-header-cell *matHeaderCellDef> Cloud </th>
       <td mat-cell *matCellDef="let skillsOverview"> {{skillsOverview.editor}} </td>
     </ng-container>
     <ng-container matColumnDef="database">
-      <th mat-header-cell *matHeaderCellDef> Databases </th>
+      <th mat-header-cell *matHeaderCellDef> Other </th>
       <td mat-cell *matCellDef="let skillsOverview"> {{skillsOverview.database}} </td>
     </ng-container>
 
@@ -36,49 +36,46 @@
   </table>
   <table class="mobile-table" *ngIf="this.resizeService.mobileScreen">
     <tr>
-      <th> Languages </th>
-      <th> Frameworks </th>
-      <th> Editors & VC </th>
-      <th> Databases </th>
+      <th> Frontend </th>
+      <th> Backend </th>
+      <th> Cloud </th>
+      <th> Other </th>
     </tr>
     <tr>
-      <td> TypeScript </td>
+      <td> React </td>
+    </tr>
+    <tr>
+      <td> Vue </td>
+      <td> NodeJS </td>
+      <td> Java </td>
+    </tr>
+    <tr>
       <td> Angular </td>
-      <td> VS Code </td>
-      <td> MySql</td>
-    </tr>
-    <tr>
-      <td> JavaScript </td>
-      <td> Angular Material </td>
-      <td> IDEA IntelliJ </td>
-      <td> MongoDB </td>
+      <td> AWS </td>
+      <td> GCP </td>
+      <td> Jenkins </td>
+      <td> DynamoDB </td>
+      <td> S3 </td>
     </tr>
     <tr>
       <td> HTML/CSS </td>
-      <td> RxJS </td>
-      <td> Jupyter Notebook </td>
-      <td> PostgreSQL </td>
+      <td> SQL/NoSQL </td>
+      <td> CI/CD </td>
     </tr>
     <tr>
-      <td> Dart </td>
-      <td> Flutter </td>
-      <td> Spyder </td>
-      <td> Firebase </td>
-    </tr>
-    <tr>
-      <td> Java </td>
-      <td> Bootstrap </td>
-      <td> Git </td>
-      <td> </td>
-    </tr>
-    <tr>
+      <td> Material UI </td>
       <td> Python </td>
     </tr>
     <tr>
+      <td> Bootstrap </td>
       <td> PHP </td>
     </tr>
     <tr>
+      <td> NextJS </td>
       <td> C++ </td>
+    </tr>
+    <tr>
+      <td> JavaScript/TypeScript </td>
     </tr>
   </table>
   <h2> Links about me: </h2>
